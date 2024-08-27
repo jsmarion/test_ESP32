@@ -1,5 +1,6 @@
 #pragma once
 
+#include "esphome.h"
 #include "esphome/core/component.h"
 #include "DFRobot_HumanDetection.h"
 

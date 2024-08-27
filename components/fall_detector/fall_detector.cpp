@@ -1,4 +1,5 @@
-#include "esphome/core/log.h"
+#include "esphome.h"
+// #include "esphome/core/log.h"
 #include "fall_detector.h"
 
 namespace esphome {
