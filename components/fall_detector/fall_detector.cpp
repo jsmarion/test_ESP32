@@ -2,8 +2,8 @@
 // #include "esphome/core/log.h"
 #include "fall_detector.h"
 
-namespace esphome {
-namespace fall_detector {
+// namespace esphome {
+// namespace fall_detector {
 
 static const char *TAG = "fall_detector.component";
 
@@ -30,5 +30,5 @@ C1001() : PollingComponent(5000) {
     }
   };
 
-}  // namespace fall_detector
-}  // namespace esphome
+// }  // namespace fall_detector
+// }  // namespace esphome

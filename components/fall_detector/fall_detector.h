@@ -4,8 +4,8 @@
 #include "esphome/core/component.h"
 #include "DFRobot_HumanDetection.h"
 
-namespace esphome {
-namespace fall_detector {
+// namespace esphome {
+// namespace fall_detector {
 
 class C1001 : public PollingComponent {
  public:
@@ -19,6 +19,6 @@ class C1001 : public PollingComponent {
 };
 
 
-}  // namespace fall_detector
-}  // namespace esphome
+// }  // namespace fall_detector
+// }  // namespace esphome
 
