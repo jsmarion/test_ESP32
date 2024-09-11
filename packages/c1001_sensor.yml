@@ -85,10 +85,10 @@ uart:
 #     id: target_4_SNR # do not change
 #     internal: true
 
-#   - platform: template
-#     name: num_targets
-#     id: num_targets # do not change
-#     accuracy_decimals: 0
+  - platform: template
+    name: num_targets
+    id: num_targets # do not change
+    accuracy_decimals: 0
 
 #   - platform: custom
 #     lambda: |-
@@ -101,13 +101,13 @@ switch:
 #   - platform: safe_mode
 #     name: use_safe_mode
 
-#   - platform: template
-#     name: show_target_stats
-#     id: show_target_stats
-#     optimistic: true
-#     internal: true
-#     on_turn_off:
-#       - lambda: 'return clearTargets();'
+  - platform: template
+    name: show_target_stats
+    id: show_target_stats
+    optimistic: true
+    internal: true
+    on_turn_off:
+      - lambda: 'return clearTargets();'
 
   - platform: template
     name: mmwave_sensor
