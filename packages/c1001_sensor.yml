@@ -44,7 +44,7 @@ uart:
 #             - lambda: |-
 #                 return clearTargets();
     
-# sensor:      
+sensor:      
 #   - platform: template
 #     name: target_1_distance_m
 #     id: target_1_distance_m # do not change
