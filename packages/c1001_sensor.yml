@@ -324,14 +324,14 @@ script:
 
   - id: turn_on_led
     then:
-      - switch.turn_off: mmwave_sensor
+      - switch.turn_off: led
       - delay: 1s
       - uart.write: "setLedMode 1 0"
       - delay: 1s
       - lambda: |-
           DFRobot_HumanDetection(id(uart_bus)).configLEDLight(1);
       - delay: 1s 
-      - switch.turn_on: mmwave_sensor
+      - switch.turn_on: led
       - delay: 6s # the sum of mmwave_sensor delays
     
   - id: turn_off_led
