@@ -6,7 +6,7 @@ class C1001 : public PollingComponent {
   DFRobot_HumanDetection c1001;
   Sensor *working_mode = new Sensor();
 
-  C1001() : PollingComponent(5000) { }
+  // C1001() : PollingComponent(5000) { }
 
   void setup() override {
     if(!c1001.begin()) {
