@@ -109,17 +109,17 @@ switch:
 #     on_turn_off:
 #       - lambda: 'return clearTargets();'
 
-#   - platform: template
-#     name: mmwave_sensor
-#     id: mmwave_sensor # do not change
-#     entity_category: config
-#     optimistic: true
-#     turn_on_action:
-#       then:
-#         - script.execute: turn_on_mmwave_sensor
-#     turn_off_action:
-#       then:
-#         - script.execute: turn_off_mmwave_sensor
+  - platform: template
+    name: mmwave_sensor
+    id: mmwave_sensor # do not change
+    entity_category: config
+    optimistic: true
+    turn_on_action:
+      then:
+        - script.execute: turn_on_mmwave_sensor
+    turn_off_action:
+      then:
+        - script.execute: turn_off_mmwave_sensor
 
   - platform: template
     name: led
@@ -308,19 +308,19 @@ number:
 #     type: int
 
 script:
-#   - id: turn_on_mmwave_sensor
-#     then:
-#       - uart.write: "setUartOutput 1 0"
-#       - delay: 1s
-#       - uart.write: "setUartOutput 2 1 1 2"
-#       - delay: 1s
-#       - uart.write: "saveConfig"
-#       - delay: 3s 
-#       - uart.write: "sensorStart"
+  - id: turn_on_mmwave_sensor
+    then:
+      - uart.write: "setUartOutput 1 0"
+      - delay: 1s
+      - uart.write: "setUartOutput 2 1 1 2"
+      - delay: 1s
+      - uart.write: "saveConfig"
+      - delay: 3s 
+      - uart.write: "sensorStart"
 
-#   - id: turn_off_mmwave_sensor
-#     then:
-#       - uart.write: "sensorStop"
+  - id: turn_off_mmwave_sensor
+    then:
+      - uart.write: "sensorStop"
 
   - id: turn_on_led
     then:
