@@ -329,7 +329,7 @@ script:
       - uart.write: "setLedMode 1 0"
       - delay: 1s
       - lambda: |-
-          leapmmw(id(uart_bus)).configLEDLight(1);
+          leapmmw(id(uart_bus)).configLEDLight(eFALLLed, 1);
       - delay: 1s 
       - switch.turn_on: led
       - delay: 6s # the sum of mmwave_sensor delays
@@ -341,7 +341,7 @@ script:
       - uart.write: "setLedMode 1 1"
       - delay: 1s
       - lambda: |-
-          leapmmw(id(uart_bus)).configLEDLight(0);
+          leapmmw(id(uart_bus)).configLEDLight(eFALLLed, 0);
       - delay: 1s
       - switch.turn_on: mmwave_sensor
       - delay: 6s # the sum of mmwave_sensor delays
